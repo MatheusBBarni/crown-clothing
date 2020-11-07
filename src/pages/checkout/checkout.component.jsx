@@ -28,8 +28,8 @@ function CheckoutPage({ cartItems, total }) {
         </div>
       </div>
       {
-        cartItems.map(cartItem => (
-          <CheckoutItem cartItem={cartItem} />
+        cartItems.map((cartItem, index) => (
+          <CheckoutItem key={index} cartItem={cartItem} />
         ))
       }
       <div className="total">
